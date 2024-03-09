@@ -3,14 +3,16 @@ package ru.netology.smarthome;
 public class Radio {
     private int stationNum;
     private int currentVolume;
-    public int getStationNum(){
+
+    public int getStationNum() {
         return stationNum;
     }
+
     public int getCurrentVolume() {
         return currentVolume;
     }
 
-    public void setCurrentVolume(int newCurrentVolume ){
+    public void setCurrentVolume(int newCurrentVolume) {
         if (newCurrentVolume > 100) {
             return;
         }
@@ -61,7 +63,7 @@ public class Radio {
     public void decreaseVolume() {
         if (currentVolume == 0) {
             currentVolume = 0;
-        }else{
+        } else {
             currentVolume--;
         }
     }
