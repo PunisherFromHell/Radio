@@ -40,8 +40,8 @@ public class RadioTest {
 
     @Test
     public void noNext() {
-        Radio rad = new Radio();
-        rad.setStationNum(9);
+        Radio rad = new Radio(30);
+        rad.setStationNum(29);
         rad.next();
         int expected = 0;
         int actual = rad.getStationNum();
@@ -63,10 +63,10 @@ public class RadioTest {
 
     @Test
     public void NoPrev() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(30);
         rad.setStationNum(0);
         rad.prev();
-        int expected = 9;
+        int expected = 29;
         int actual = rad.getStationNum();
 
         Assertions.assertEquals(expected, actual);
